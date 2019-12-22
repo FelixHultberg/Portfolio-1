@@ -1,0 +1,189 @@
+button :hover {
+  cursor: pointer; }
+
+#btnCalculate {
+  border: 4px solid #50514f;
+  border-radius: 10px;
+  background-color: #dee5e5;
+  color: #25171a; }
+
+#btnClear {
+  border: 4px solid #f56960;
+  border-radius: 10px;
+  background-color: #dee5e5;
+  color: #25171a; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #dee5e5;
+  font-family: sans-serif; }
+  body main #section-1 {
+    display: grid;
+    grid-template-columns: 20% 78%;
+    grid-template-rows: 25% 25% 25%;
+    grid-row-gap: 5%;
+    height: 40vh;
+    padding-top: 2%;
+    padding-left: 2%;
+    background-color: #50514f;
+    border: 4px solid #25171a;
+    border-radius: 20px;
+    margin: 5% 5% 5% 5%; }
+    body main #section-1 #outputInkomster,
+    body main #section-1 #outputUtgifter,
+    body main #section-1 #outputResultat {
+      text-align: left;
+      padding-left: 1%;
+      font-size: 2rem; }
+    body main #section-1 i {
+      text-align: left;
+      margin-top: 1%;
+      padding-left: 1%; }
+    body main #section-1 .box-1,
+    body main #section-1 .box-2,
+    body main #section-1 .box-3 {
+      height: 100%;
+      border-radius: 20px 0 0 20px; }
+      body main #section-1 .box-1 h2,
+      body main #section-1 .box-2 h2,
+      body main #section-1 .box-3 h2 {
+        text-align: center;
+        margin-top: 10%; }
+    body main #section-1 .box-1 {
+      background-color: #58b09c; }
+    body main #section-1 .box-2 {
+      background-color: #f56960; }
+    body main #section-1 .box-3 {
+      background-color: #dee5e5; }
+    body main #section-1 .inkomster,
+    body main #section-1 .utgifter,
+    body main #section-1 .resultat {
+      background-color: #25171a;
+      border-radius: 0 20px 20px 0px; }
+    body main #section-1 .box-1 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2; }
+    body main #section-1 .inkomster {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      border: 5px solid #58b09c;
+      color: #58b09c; }
+    body main #section-1 .utgifter {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      border: 5px solid #f56960;
+      color: #f56960; }
+    body main #section-1 .resultat {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      border: 5px solid #dee5e5;
+      color: #dee5e5; }
+    body main #section-1 .box-2 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3; }
+    body main #section-1 .box-3 {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4; }
+  body main #section-2 {
+    display: grid;
+    grid-template-columns: 5% 38% 38% 5% 5%;
+    grid-row-gap: 5%;
+    grid-column-gap: 2%;
+    padding: 2%;
+    margin: 5%;
+    border: 4px solid #25171a;
+    border-radius: 20px;
+    background-color: #58b09c; }
+    body main #section-2 #text-container input,
+    body main #section-2 #text-container select,
+    body main #section-2 #value-container input,
+    body main #section-2 #value-container select,
+    body main #section-2 .option input,
+    body main #section-2 .option select {
+      width: 100%;
+      height: 100%;
+      font-size: 2rem;
+      border: 4px solid #50514f;
+      border-radius: 10px;
+      padding-left: 2%; }
+  body main #section-3 {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-column-gap: 4%;
+    padding: 2%;
+    margin: 5%;
+    border: 4px solid #25171a;
+    border-radius: 20px;
+    background-color: #50514f; }
+    body main #section-3 .lista-inkomster,
+    body main #section-3 .lista-utgifter {
+      background-color: #58b09c;
+      text-align: left;
+      padding: 2%;
+      font-size: 1.5rem;
+      border: 4px solid #dee5e5;
+      border-radius: 20px; }
+      body main #section-3 .lista-inkomster table tr th,
+      body main #section-3 .lista-utgifter table tr th {
+        padding-bottom: 2%; }
+
+@media screen and (max-width: 750px) {
+  h2 {
+    font-size: 1rem; }
+  body main #section-1 {
+    display: grid;
+    grid-template-columns: 25% 74%;
+    grid-template-rows: 28% 28% 28%;
+    grid-row-gap: 5%;
+    height: 30vh;
+    padding-top: 1%;
+    padding-left: 1%;
+    margin: 10% 1% 1% 1%; }
+  body main #section-2 {
+    display: grid;
+    grid-template-columns: 15% 38% 38%;
+    grid-template-rows: 40% 40%;
+    grid-row-gap: 10%;
+    grid-column-gap: 3%;
+    height: 15vh;
+    padding: 2%;
+    margin: 5% 1% 5% 1%;
+    background-color: #50514f; }
+    body main #section-2 #text-container input,
+    body main #section-2 #text-container select,
+    body main #section-2 #value-container input,
+    body main #section-2 #value-container select,
+    body main #section-2 .option input,
+    body main #section-2 .option select {
+      font-size: 1.2rem;
+      padding-left: 4%; }
+  body main #section-3 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 40%;
+    grid-gap: 4%;
+    padding: 2%;
+    margin: 1%; }
+    body main #section-3 .lista-inkomster,
+    body main #section-3 .lista-utgifter {
+      text-align: left;
+      padding-bottom: 10%; }
+    body main #section-3 table {
+      border-collapse: collapse;
+      height: 100%;
+      width: 100%; } }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Uppgift-2</title>
+  </head>
+
+  <body>
+    <main>
+      <!-- section 1 -->
+      <div id="section-1">
+        <div class="box-1">
+          <h2>Totala Inkomster</h2>
+        </div>
+
+        <div class="inkomster">
+          <i class="fas fa-plus"></i>
+          <h3 id="outputInkomster">
+            Inkomster
+          </h3>
+        </div>
+
+        <div class="box-2">
+          <h2>Totala Utgifter</h2>
+        </div>
+        <div class="utgifter">
+          <i class="fas fa-minus"></i>
+          <h3 id="outputUtgifter">Utgifter</h3>
+        </div>
+
+        <div class="box-3">
+          <h2>Resultat</h2>
+        </div>
+        <div class="resultat">
+          <i class="fas fa-equals"></i>
+          <h3 id="outputResultat">Resultat</h3>
+        </div>
+      </div>
+      <!-- end -->
+      <!-- section 2 -->
+      <div id="section-2">
+        <div class="option">
+          <select id="options" name="options">
+            <option value="+">+</option>
+            <option value="-">-</option>
+          </select>
+        </div>
+
+        <div id="text-container">
+          <input id="text-input" type="text" placeholder="Namn" />
+        </div>
+
+        <div id="value-container">
+          <input id="value-input" type="number" placeholder="Värde" />
+        </div>
+        <!-- calculate button-->
+        <button id="btnCalculate" onclick="valueSwitch(), calculate(); ">
+          <i class="fas fa-calculator"></i>
+        </button>
+        <button id="btnClear" onclick="clearall();">
+          <strong>Clear</strong>
+        </button>
+      </div>
+
+      <div id="section-3">
+        <div style="overflow-x:auto;" class="lista-inkomster">
+          <table id="inkomst">
+            <tr>
+              <th>Inkomster</th>
+            </tr>
+          </table>
+        </div>
+
+        <div style="overflow-x:auto;" class="lista-utgifter">
+          <table id="utgift">
+            <tr>
+              <th>Utgifter</th>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- end -->
+    </main>
+    <!-- JavaScript link -->
+    <script src="/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+// buttons
+
+button :hover {
+  cursor: pointer;
+}
+
+#btnCalculate {
+  border: 4px solid $color-primary-dark;
+  border-radius: 10px;
+  background-color: $color-primary-light;
+  color: $color-primary-black;
+}
+
+#btnClear {
+  border: 4px solid $color-primary-red;
+  border-radius: 10px;
+  background-color: $color-primary-light;
+  color: $color-primary-black;
+}
