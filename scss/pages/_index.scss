@@ -1,251 +1,70 @@
+//index and general styling
+
 * {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-  background-color: $color-primary-light;
-  font-family: sans-serif;
-  main {
-    #section-1 {
-      // grid
-      display: grid;
-      grid-template-columns: 20% 78%;
-      grid-template-rows: 25% 25% 25%;
-      grid-row-gap: 5%;
+  @include background;
+  background: $color-primary-black;
+  color: set-text-color($color-primary-black);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  height: 100%;
+  margin: 0;
+}
 
-      // style
-      height: 40vh;
-      padding-top: 2%;
-      padding-left: 2%;
-      background-color: $color-primary-dark;
-      border: 4px solid $color-primary-black;
-      border-radius: 20px;
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
 
-      margin: 5% 5% 5% 5%;
+  // lagre heading
+  &.lg-heading {
+    font-size: 6rem;
+  }
 
-      #outputInkomster,
-      #outputUtgifter,
-      #outputResultat {
-        text-align: left;
-        padding-left: 1%;
-        font-size: 2rem;
-      }
-
-      i {
-        text-align: left;
-        margin-top: 1%;
-        padding-left: 1%;
-      }
-      .box-1,
-      .box-2,
-      .box-3 {
-        height: 100%;
-        border-radius: 20px 0 0 20px;
-
-        h2 {
-          text-align: center;
-          margin-top: 10%;
-        }
-      }
-
-      .box-1 {
-        background-color: $color-primary;
-      }
-
-      .box-2 {
-        background-color: $color-primary-red;
-      }
-
-      .box-3 {
-        background-color: $color-primary-light;
-      }
-
-      .inkomster,
-      .utgifter,
-      .resultat {
-        background-color: $color-primary-black;
-        border-radius: 0 20px 20px 0px;
-      }
-      .box-1 {
-        // grid
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-      }
-
-      .inkomster {
-        // grid
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-        //style
-        border: 5px solid $color-primary;
-        color: $color-primary;
-      }
-
-      .utgifter {
-        // grid
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 3;
-        //style
-        border: 5px solid $color-primary-red;
-        color: $color-primary-red;
-      }
-
-      .resultat {
-        // grid
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 4;
-        //style
-        border: 5px solid $color-primary-light;
-        color: $color-primary-light;
-      }
-
-      .box-2 {
-        // grid
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 2;
-        grid-row-end: 3;
-      }
-      .box-3 {
-        // grid
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 3;
-        grid-row-end: 4;
-      }
-    }
-
-    #section-2 {
-      // grid
-      display: grid;
-      grid-template-columns: 5% 38% 38% 5% 5%;
-      grid-row-gap: 5%;
-      grid-column-gap: 2%;
-      //style
-      padding: 2%;
-      margin: 5%;
-      border: 4px solid $color-primary-black;
-      border-radius: 20px;
-      background-color: $color-primary;
-
-      #text-container,
-      #value-container,
-      .option {
-        input,
-        select {
-          width: 100%;
-          height: 100%;
-          font-size: 2rem;
-          border: 4px solid $color-primary-dark;
-          border-radius: 10px;
-          padding-left: 2%;
-        }
-      }
-    }
-    #section-3 {
-      // grid
-      display: grid;
-      grid-template-columns: 48% 48%;
-      grid-column-gap: 4%;
-      //style
-      padding: 2%;
-      margin: 5%;
-      border: 4px solid $color-primary-black;
-      border-radius: 20px;
-      background-color: $color-primary-dark;
-      .lista-inkomster,
-      .lista-utgifter {
-        //style
-        background-color: $color-primary;
-        text-align: left;
-        padding: 2%;
-        font-size: 1.5rem;
-        border: 4px solid $color-primary-light;
-        border-radius: 20px;
-
-        table tr th {
-          padding-bottom: 2%;
-        }
-      }
-    }
+  // small heading
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
   }
 }
 
-// responsive layout
-@media screen and (max-width: 750px) {
-  h2 {
-    font-size: 1rem;
+// links
+a {
+  color: $color-primary-light;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: $color-primary-red;
+}
+
+main {
+  padding: 4rem;
+  //height: 100%;
+  min-height: calc(100vh - 60px);
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $color-primary-red;
+        @include easeOut();
+      }
+    }
   }
-  body {
-    main {
-      #section-1 {
-        // grid
-        display: grid;
-        grid-template-columns: 25% 74%;
-        grid-template-rows: 28% 28% 28%;
-        grid-row-gap: 5%;
 
-        // style
-        height: 30vh;
-        padding-top: 1%;
-        padding-left: 1%;
-        margin: 10% 1% 1% 1%;
-      }
-
-      #section-2 {
-        // grid
-        display: grid;
-        grid-template-columns: 15% 38% 38%;
-        grid-template-rows: 40% 40%;
-        grid-row-gap: 10%;
-        grid-column-gap: 3%;
-        //style
-        height: 15vh;
-        padding: 2%;
-        margin: 5% 1% 5% 1%;
-        background-color: $color-primary-dark;
-
-        #text-container,
-        #value-container,
-        .option {
-          input,
-          select {
-            font-size: 1.2rem;
-            padding-left: 4%;
-          }
-        }
-      }
-
-      #section-3 {
-        // grid
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 40% 40%;
-        grid-gap: 4%;
-        //style
-        padding: 2%;
-        margin: 1%;
-        .lista-inkomster,
-        .lista-utgifter {
-          //style
-
-          text-align: left;
-          padding-bottom: 10%;
-        }
-        table {
-          border-collapse: collapse;
-          height: 100%;
-          width: 100%;
-        }
-      }
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
     }
   }
 }

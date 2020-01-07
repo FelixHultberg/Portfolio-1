@@ -1,7 +1,7 @@
 {
-  "name": "Individuellinlämning2",
+  "name": "Portfolio",
   "version": "1.0.0",
-  "description": "uppgift",
+  "description": "My personal portfolio",
   "main": "index.js",
   "dependencies": {
     "gulp-cli": "^2.2.0"

@@ -1,9 +1,20 @@
 //! This file should only contain imports
+
 // abstracts
 @import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+// pages
+@import "./pages/index";
+@import "./pages/about";
+@import "./pages/work";
+@import "./pages/contact";
 
 // components
 @import "./components/buttons";
 
-// pages
-@import "./pages/index";
+// layout
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/menu";
+@import "./layout/mobile";
